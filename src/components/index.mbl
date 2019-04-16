@@ -1,0 +1,42 @@
+<app>
+<comments>
+   Example template multiblade
+</comments>
+<body>
+ <img src="https://cdn.pixabay.com/photo/2015/11/07/11/03/satellite-1030779_960_720.jpg" />
+    <div class='container text-white'>
+         <h1 class='text-center'> MBL </h1>
+         <p> Your reactive framework installed </p>
+         <p> Example </p>
+         <p> {{ app.data.number }} </p>
+         <input type="text" m-model="name" >
+    </div>
+</body>
+<script>
+  exports.app = () => { 
+    return {
+        data:{
+          number: 1,
+          name: "Igor"
+        },
+        methods:{
+            add: () => {
+              app.data.number = Math.random( 10 * 100 ) / 100000;
+            }
+        }
+    }
+  }
+</script>
+<style scoped>
+ .container {
+  background-color: rgb(22, 22, 22, 0.5);
+  height:100vh;
+ }
+ img {
+   height:100vh;
+   width:100%;
+   z-index:-1;
+   position:absolute;
+ }
+</style>
+</app>

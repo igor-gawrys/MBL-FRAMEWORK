@@ -1,0 +1,23 @@
+<app>
+<comments>
+   Example template multiblade
+</comments>
+<body>
+    <textarea class='form-control'></textarea>
+    <button class='btn btn-primary' m-click='buttonClick()'>Contact with me !</button>
+</body>
+<script>
+  exports.app = () => { 
+    return {
+        data:{
+          name: 'IGOR'
+        },
+        methods:{
+            buttonClick: () => {
+                alert( "You contacted with " + app.data.name );
+            }
+        }
+    }
+  };
+</script>
+</app>
